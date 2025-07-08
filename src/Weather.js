@@ -5,24 +5,37 @@ export default function Weather() {
   return (
     <div className="Weather">
       <form>
-        <input type="search" placeholder="Enter a city.."></input>
-        <input type="submit" value="Search"></input>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              className="form-control"
+              autoFocus="on"
+            ></input>
+          </div>
+          <div className="col-3">
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            ></input>
+          </div>
+        </div>
       </form>
       <h1>Perth</h1>
-      <ul>
-        <li>Monday 13:00</li>
-        <li>Mostly Cloudy</li>
-      </ul>
       <div className="row">
-        <div className="col-6">
-          <img src="#" alt="Mostly Cloudy" />
-          6C
-        </div>
-        <div className="col-6">
+        <div className="col-6 mt-3">
           <ul>
-            <li>Humidity:80%</li>
-            <li>Wind:13km/h</li>
+            <li>Monday 13:00, Mostly Cloudy</li>
+            <li>Humidity:80%, Wind:13km/h</li>
           </ul>
+        </div>
+        <div className="col-6 ">
+          <img src="#" className="float-left" />
+
+          <span className="temperature">6</span>
+          <span className="unit">°C</span>
         </div>
       </div>
     </div>
