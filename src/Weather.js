@@ -4,14 +4,22 @@ import "./Weather.css";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(response.data.temperature.current);
-    setReady(true);
+    setWeatherData({
+      ready: true,
+      temperature: response.data.temperature.current,
+      date: "Monday",
+      city: response.data.city,
+      humidity: response.data.temperature.humidity,
+      wind: response.data.wind.speed,
+      description: response.data.condition.description,
+      iconUrl: "#",
+    });
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form>
@@ -33,18 +41,29 @@ export default function Weather() {
             </div>
           </div>
         </form>
-        <h1>Perth</h1>
+        <h1>{weatherData.city}</h1>
         <div className="row">
           <div className="col-6 mt-3">
             <ul>
-              <li>Monday 13:00, Mostly Cloudy</li>
-              <li>Humidity:80%, Wind:13km/h</li>
+              <li>
+                {weatherData.date},{" "}
+                <span className="text-capitalize">Mostly Cloudy</span>
+              </li>
+              <li>
+                Humidity:{weatherData.humidity}%, Wind:{weatherData.wind}km/h
+              </li>
             </ul>
           </div>
           <div className="col-6 ">
-            <img src="#" className="float-left" />
+            <img
+              src={weatherData.iconUrl}
+              alt={weatherData.description}
+              className="float-left"
+            />
 
-            <span className="temperature">{Math.round(temperature)}</span>
+            <span className="temperature">
+              {Math.round(weatherData.temperature)}
+            </span>
             <span className="unit">°C</span>
           </div>
         </div>
