@@ -17,7 +17,7 @@ export default function WeatherInfor(props) {
                 {props.data.description}
               </div>
             </li>
-            <li>
+            <li className="description">
               Humidity:{props.data.humidity}%, Wind:{props.data.wind}km/h
             </li>
           </ul>

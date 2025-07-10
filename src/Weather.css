@@ -29,6 +29,10 @@
   line-height: 20px;
   list-style: none;
 }
+.Weather .description {
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 .temperature {
   color: #212121;
