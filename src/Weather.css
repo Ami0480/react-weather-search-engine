@@ -1,6 +1,6 @@
 .Weather {
-  border: 1px solid lightgrey;
-  background-color: #f9f7fe;
+  border: 1px solid rgb(235, 235, 235);
+  background-color: #fcf7fe;
   padding: 30px;
   border-radius: 10px;
   color: #27214266;

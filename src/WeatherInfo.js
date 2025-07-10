@@ -25,7 +25,7 @@ export default function WeatherInfor(props) {
 
         <div className="col-6 d-flex align-items-center">
           <span className="me-2 mt-1">
-            <WeatherIcon code={props.data.icon} />
+            <WeatherIcon code={props.data.icon} size={52} />
           </span>
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
