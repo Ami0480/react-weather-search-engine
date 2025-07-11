@@ -1,7 +1,7 @@
-.WeatherForcast {
+.WeatherForecast {
   text-align: center;
 }
-.WeatherForcast-temperatures-min {
+.WeatherForecast-temperatures-min {
   opacity: 0.8;
   margin-left: 5px;
 }
