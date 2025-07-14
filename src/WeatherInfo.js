@@ -13,11 +13,11 @@ export default function WeatherInfor(props) {
           <ul>
             <li>
               <FormattedDate date={props.data.date} />
-              <div className="text-uppercase mt-3">
+              <div className="text-uppercase mt-3 ">
                 {props.data.description}
               </div>
             </li>
-            <li className="description">
+            <li className="description mb-3">
               Humidity:{props.data.humidity}%, Wind:{props.data.wind}km/h
             </li>
           </ul>
